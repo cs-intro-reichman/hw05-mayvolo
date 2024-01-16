@@ -92,7 +92,7 @@ public class GameOfLife {
    		int cols = board[0].length;
 		int[][] newBoard = new int[rows][cols];
 		for(int i = 1; i < (rows - 1); i++) {
-			for(int j = 0; j < (cols - 1); j++) {
+			for(int j = 1; j < (cols - 1); j++) {
 				newBoard[i][j] = cellValue(board, i, j);
 			}
 		}
