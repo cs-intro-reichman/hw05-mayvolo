@@ -11,7 +11,7 @@ public class GameOfLife {
 		String fileName = args[0];
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
-		 test1(fileName);
+		//test1(fileName);
 		//// test2(fileName);
 		//// test3(fileName, 3);
 		//// play(fileName);
@@ -129,12 +129,12 @@ public class GameOfLife {
 		int count = 0;
 		for(int row = (i-1); row <= (i+1); row++) {
 			for(int col = (j-1); col <= (j+1); col++) {
-				if (row >= 0 && row < board.length && col >= 0 && col < board[0].length){
+				//if (row >= 0 && row < board.length && col >= 0 && col < board[0].length){
 					count += board[row][col];
-				}
+				//}
 			}
 		}
-		count -=  board[i][j];
+		//count -=  board[i][j];
 		return count;
 	}
 	
@@ -144,7 +144,7 @@ public class GameOfLife {
 		int b = arr[0].length;
 		for(int i = 0; i < a; i++) {
 			for(int j = 0; j < b; j++) {
-				System.out.printf("%4d", arr[i][j]);
+				System.out.printf("%3s", arr[i][j]);
 			}
 			System.out.println();
 		}
