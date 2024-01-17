@@ -113,12 +113,17 @@ public class GameOfLife {
 		int value = board[i][j];
 		if(value == 1){
 			if((neighbors < 2) || (neighbors > 3)) {
-				value = 0;
-			} 
-		 } else if((value == 0) && (neighbors == 3)) {
-			value = 1;
+				return 0;
+			} else {
+				return 1;
+			
+			}
+		}
+		if((value == 0) && (neighbors == 3)) {
+			return 1;
+		 } else {
+			return 0;
 		 }
-		return value;
 	}
 	
 	// Counts and returns the number of living neighbors of the given cell
